@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body{
+            width: 100vw;
+            min-height: 100vh;
+            background-image: linear-gradient(purple,blue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+           
+        #title{
+            animation-name: title;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes title{
+            from{
+                color: yellow;
+                transform: translateX(-100px) rotate(15deg);
+            }
+            to{
+                color: yellowgreen;
+                transform: translateX(100px) rotate(-15deg);
+            }
+        }
+
+        img{
+            width: 300px;
+            height: 200px;
+            border: 10px solid white;
+            display: none;
+        }
+        h3{
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Riddle Master</h1>
+        <h1 id="score">0</h1>
+    </header>
+    <h3>1. What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="q1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button>
+    <h4 id="r1"></h4>
+    <img id="i1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Breakfast_Platter.jpg/1200px-Breakfast_Platter.jpg" alt="">
+    <h3>2. Im tall when Im young and Im short when Im old?</h3>
+    <input type="text" name="" id="q2">
+    <button onclick="q2()">Submit Answer</button>
+    <button onclick="h2()">Hint</button>
+    <h4 id="r2"></h4>
+    <img id="i2" src="https://fetzer.org/sites/default/files/styles/crop_resource_main/public/candle-light-1170871.jpg?h=7a87167b&itok=IL8oDdxh" alt="">
+    <h3>3. What has has holds in it but still holds water?</h3>
+    <input type="text" name="" id="q3">
+    <button onclick="q3()">Submit Answer</button>
+    <button onclick="h3()">Hint</button>
+    <h4 id="r3"></h4>
+    <img id="i3" src="https://5.imimg.com/data5/RI/XG/MY-35655789/sponge-cellulose-500x500.jpg" alt="">
+    
+    
+</body>
+<script>
+    var score = 0;
+    function h1(){
+        document.getElementById("i1").style.display = "inline-block";
+        score = score - .5
+        document.getElementById("score").innerText = 
+        score;
+    }
+    function q1(){
+    var q1 = document.getElementById("q1").value;
+    if(q1.toUpperCase() == "EGG"){
+        document.getElementById("r1").innerText = 
+        "correct answer";
+        score = score + 1
+        document.getElementById("score").innerText = 
+        score;
+    }
+    else{
+        document.getElementById("r1").innerText = 
+        "wrong answer"
+    }
+    }
+    function h2(){
+        document.getElementById("i2").style.display = "inline-block";
+        score = score - .5
+        document.getElementById("score").innerText = 
+        score;
+    }
+    function q2(){
+    var q2 = document.getElementById("q2").value;
+    if(q2.toUpperCase() == "CANDLE"){
+        document.getElementById("r2").innerText = 
+        "correct answer";
+        score = score + 1
+        document.getElementById("score").innerText = 
+        score;
+    }
+    else{
+        document.getElementById("r2").innerText = 
+        "wrong answer"
+    }
+    }
+    function h3(){
+        document.getElementById("i3").style.display = "inline-block";
+        score = score - .5
+        document.getElementById("score").innerText = 
+        score;
+    }
+    function q3(){
+    var q3 = document.getElementById("q3").value;
+    if(q3.toUpperCase() == "SPONGE"){
+        document.getElementById("r3").innerText = 
+        "correct answer";
+        score = score + 1
+        document.getElementById("score").innerText = 
+        score;
+    }
+    else{
+        document.getElementById("r3").innerText = 
+        "wrong answer";
+    }
+    }
+</script>
+</html>

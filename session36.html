@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <h3>1. Which is the tallest building in the world?</h3>
+    <label for="">1. Burj Khalifa</label>
+    <input type="radio" name="building" value="burj" id="">
+    <label for="">2. Shanghai Tower</label>
+    <input type="radio" name="building" value="shanghai" id=""><br><br>
+    <label for="">3. Eiffel Tower</label>
+    <input type="radio" name="building" value="eiffel" id="">
+    <label for="">4. Twin Tower</label>
+    <input type="radio" name="building" value="twin" id="">
+    <h3>2. What is the deepest part of the world?</h3>
+    <label for="">1. Mariana Trench</label>
+    <input type="radio" name="deep" value="mariana" id="">
+    <label for="">2. The Antartic Sea</label>
+    <input type="radio" name="deep" value="antartica" id=""><br><br>
+    <label for="">3. Grand Canyon</label>
+    <input type="radio" name="deep" value="grand" id="">
+    <label for="">4. The Andes Mountain Range</label>
+    <input type="radio" name="deep" value="andes" id="">
+    <h3>3. Who is the wealthiest person in the world</h3>
+    <label for="">1. Jeff Bezos</label>
+    <input type="radio" name="wealth" value="jeff" id="">
+    <label for="">2. Bill Gates</label>
+    <input type="radio" name="wealth" value="bill" id=""><br><br>
+    <label for="">3. Elon Musk</label>
+    <input type="radio" name="wealth" value="elon" id="">
+    <label for="">Tony Stark</label>
+    <input type="radio" name="wealth" value="tony" id="">
+    <h3>4. Who is known as the father of modern computing?</h3>
+    <label for="">1. Charles Babbage</label>
+    <input type="radio" name="modern" value="charles" id="">
+    <label for="">2. Alan Turing</label>
+    <input type="radio" name="modern" value="alan" id=""><br><br>
+    <label for="">3. Edward Teller</label>
+    <input type="radio" name="modern" value="edward" id="">
+    <label for="">4. Ernest Rutherword</label>
+    <input type="radio" name="modern" value="ernest" id="">
+    <h3>5. Which is the longest river in the world?</h3>
+    <label for="">1. Missippi</label>
+    <input type="radio" name="river" value="missippi" id="">
+    <label for="">2. Brahmaputra</label>
+    <input type="radio" name="river" value="brahmaputra" id=""><br><br>
+    <label for="">3. Nile</label>
+    <input type="radio" name="river" value="nile" id="">
+    <label for="">4. The Amazon River</label>
+    <input type="radio" name="river" value="amazon" id=""><br><br>
+
+    <a href="session37.html"><button onclick="check()">Submit Answer</button></a>
+
+
+</body>
+<script>
+    var score = 0;
+    function check(){
+        var build = document
+        .querySelector('input[name="building"]:checked').value;
+        if(build == "burj"){
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var deep = document
+        .querySelector('input[name="deep"]:checked').value;
+        if(deep == "mariana"){
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var wealth = document
+        .querySelector('input[name="wealth"]:checked').value;
+        if(wealth == "elon"){
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var modern = document
+        .querySelector('input[name="modern"]:checked').value;
+        if(modern == "alan"){
+            score = score + 1;
+            localStorage.score = score;
+        }
+        var river = document
+        .querySelector('input[name="river"]:checked').value;
+        if(river == "nile"){
+            score = score + 1;
+            localStorage.score = score;
+        }
+        document.getElementById("score").innerText = 
+        "Score: " +score;
+            localStorage.score = score;
+    }
+</script>
+</html>

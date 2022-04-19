@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 37</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Score</h1>
+        <h2 id="score">0</h2>
+        <h1>Answers</h1>
+        <h3>Which is the tallest building in the world?</h3>
+        <h4>Burj Khalifa</h4>
+        <h3>What is the deepest part of the world?</h3>
+        <h4>The Mariana Trench</h4>
+        <h3>Who is the wealthiest person in the world?</h3>
+        <h4>Elon Musk</h4>
+        <h3>Who is known as the father of modern computing?</h3>
+        <h4>Alan Turing</h4>
+        <h3>Which is the longest river in the world?</h3>
+        <h4>Nile</h4>
+    </header>
+    
+</body>
+<script>
+    var score = localStorage.score;
+    document.getElementById("score").innerText = 
+    score;
+</script>
+</html>
