@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 35</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: orangered;
+        }
+        div{
+            padding: 20px;
+            background-color: bisque;
+            border: 4px dashed green;
+        }
+        input,button{
+            padding: 10px;
+            width: 140px;
+            border: 4px inset lightgreen;
+        }
+        button{
+            border: 4px outset lightgreen;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Multiplication Table</h1>
+    </header><br><br>
+    <div>
+    <input type="text" name="" id="num">
+    <input type="text" name="" id="mul">
+    <button onclick="calculate()">Calculate</button>
+    </div>  
+    
+</body>
+<script>
+    var temp = 1;
+    function calculate(){
+
+    if(temp == 1){
+        var num = document.getElementById("num").value;
+        var mul  = document.getElementById("mul").value;
+        if(num > 1000){
+            alert("Please enter max 1000");
+            temp = 2;
+        }
+        else(mul > 1000)
+        {
+            alert("Please enter max 1000"); 
+            temp = 2;
+        }
+
+    }
+    if(temp == 2){
+      var count = 1;
+
+      while(count<=mul){
+        var result = num * count;
+        var text = num + " X " + count + " = " + result;
+        var element = document.createElement("h3");
+        element.innerText = text;
+        document.body.append(element);
+        count = count + 1;
+      }
+    }
+}
+</script>
+</html>
